@@ -1,0 +1,78 @@
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.addArea {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 20px;
+  width: 100%;
+}
+
+input {
+  padding: 6px 12px;
+  font-size: 16px;
+  color: var(--input-fg);
+  border-radius: 8px;
+}
+
+input#productname {
+  width: 100%;
+}
+
+input#count {
+  width: 100px;
+}
+
+button {
+  padding: 4px;
+  font-size: 16px;
+  color: var(--button-fg);
+  cursor: pointer;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+}
+
+button span {
+  color: var(--button-fg);
+}
+
+.products {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 30px;
+  width: 100%;
+}
+
+.product {
+  background: #747474;
+  padding: 8px 28px 8px 28px;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.product span {
+  cursor: pointer;
+}
+
+.product span:hover {
+  text-decoration: line-through;
+}
+
+.delBtn {
+  background-color: red;
+}
+
+@media (max-width: 768px) {
+  input#count {
+    width: 90px;
+  }
+}

@@ -1,0 +1,18 @@
+.theme {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+#theme label {
+  display: block;
+  margin-bottom: 20px;
+}
+
+.theme select {
+  padding: 6px 12px;
+  border-radius: 8px;
+  background-color: rgba(0, 0, 0, 0.2);
+  font-size: 16px;
+  color: var(--fg);
+}

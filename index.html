@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Einkaufsliste</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="list.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+    <link rel="manifest" href="manifest.json" />
+    <meta name="theme-color" content="#333333" />
+  </head>
+  <body>
+    <nav>
+      <button id="menuBtn" class="material-symbols-outlined">menu</button>
+      <h2>Einkaufsliste</h2>
+    </nav>
+    <div id="hamburgermenu">
+      <ul>
+        <li>
+          <button id="listBtn">
+            <span class="material-symbols-outlined"> list </span>Einkaufsliste
+          </button>
+        </li>
+        <li>
+          <button id="settingsBtn">
+            <span class="material-symbols-outlined"> settings </span
+            >Einstellungen
+          </button>
+        </li>
+      </ul>
+    </div>
+
+    <main>
+      <div class="addArea">
+        <input id="productname" type="text" placeholder="Produkt eingeben" />
+        <input id="count" type="number" placeholder="Anzahl" />
+        <button><span class="material-symbols-outlined"> add </span></button>
+      </div>
+
+      <div class="products"></div>
+    </main>
+
+    <script src="script.js"></script>
+    <script src="list.js"></script>
+    <script>
+      window.addEventListener("DOMContentLoaded", () => {
+        document.body.style.animationName = "bodyEnterAnimation";
+        document.body.style.animationDuration = "1s";
+        document.body.style.animationFillMode = "forwards";
+      });
+    </script>
+    <script>
+      if ("serviceWorker" in navigator) {
+        navigator.serviceWorker.register("./sw.js").then(() => {
+          console.log("Service Worker registriert!");
+        });
+      }
+    </script>
+  </body>
+</html>
